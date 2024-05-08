@@ -44,12 +44,24 @@ function App() {
   function fullName(firstName, lastName) {
     return `${firstName} ${lastName}`;
   }
+
   return (
-    <div>
-      <h1>Hello {name === "Lương Văn Linh" ? "lvlinh" : "lvl"}</h1>
-      <h2>{fullName("Lương Văn", "Linh")}</h2>
+    <div className="feature">
+      <img src="" alt="" className="feature-image" />
+      <h3 className="feature-title">Title</h3>
+      <p className="feature-description">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi vitae
+        tempora possimus aliquid expedita velit fuga magni suscipit facilis
+        quidem?
+      </p>
     </div>
   );
+  // return (
+  //   <div>
+  //     <h1>Hello {name === "Lương Văn Linh" ? "lvlinh" : "lvl"}</h1>
+  //     <h2>{fullName("Lương Văn", "Linh")}</h2>
+  //   </div>
+  // );
 }
 
 export default App;
