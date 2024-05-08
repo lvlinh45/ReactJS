@@ -1,8 +1,20 @@
-# React + Vite
+# Note các kiến thức liên quan
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## JSX
 
-Currently, two official plugins are available:
+- JSX: javascript XML => Là 1 định dạng cho viết HTML trong react, sẽ convert sang reactElement
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Khi sử dụng JSX trong react giúp ta viết code dễ dàng hơn
+
+- Tại sao dùng JSX mà không dùng react element? => Vì JSX dễ hiểu, dễ tiếp cận, react element cú pháp viết dài nếu có nhiều phần tử lồng nhau
+
+- ES5 hỗ trợ trình duyệt cũ. Tới ES6 1 số thứ mới không còn được hỗ trợ như Arrow function,... thì làm sao trình duyệt cũ hiểu được => dùng BABEL
+
+- Babel giúp compile code => giúp compile ra các version cũ hơn để các trình duyệt cũ hiểu được
+- Dùng biến trong JSX dùng dấu curly braces {}
+  => Viết theo JSX, sau đó nó sẽ tự build ra theo kiểu React Element
+
+## Components
+
+- Components cho phép chia nhỏ UI dưới dạng nhiều Thành phần khác nhau để có thể tái sử dụng
+- function App() => là functional components, components chữ cái đầu lúc nào cũng in hoa

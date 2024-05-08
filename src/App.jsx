@@ -39,21 +39,38 @@ import React from "react";
  */
 
 // Dùng biến trong JSX dùng dấu curly braces {}
+
+// Components cho phép chia nhỏ UI dưới dạng nhiều Thành phần khác nhau để có thể tái sử dụng
+
+function Feature() {
+  return (
+    <div>
+      <div className="feature">
+        <img src="" alt="" className="feature-image" />
+        <h3 className="feature-title">Title2</h3>
+        <p className="feature-description">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi
+          vitae tempora possimus aliquid expedita velit fuga magni suscipit
+          facilis quidem?
+        </p>
+      </div>
+    </div>
+  );
+}
+
+//  function App() => là functional components, components chữ cái đầu lúc nào cũng in hoa
 function App() {
   const name = "Lương Văn Linh";
   function fullName(firstName, lastName) {
     return `${firstName} ${lastName}`;
   }
 
+  // Trong component return về JSX
   return (
-    <div className="feature">
-      <img src="" alt="" className="feature-image" />
-      <h3 className="feature-title">Title</h3>
-      <p className="feature-description">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi vitae
-        tempora possimus aliquid expedita velit fuga magni suscipit facilis
-        quidem?
-      </p>
+    <div>
+      <Feature></Feature>
+      <Feature></Feature>
+      <Feature></Feature>
     </div>
   );
   // return (
