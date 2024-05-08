@@ -23,3 +23,10 @@
 ## props
 
 - props -> là viết tắt của property, là những thuộc tính bên trong components đó
+- Nếu props không được gọi trong components thì nó sẽ không được hiển thị
+
+# 2 cách styles cơ bản trong React
+
+- Cách 1: Inline style: Dùng attribute style ={{ width: 100px }}
+  Lưu ý: Theo cú pháp camel case, dấu ngoặc nhọn thứ nhất là JSX, thứ 2 là object
+- Cách 2: Dùng class, viết ra file riêng. Nhớ import file CSS vào file cần dùng

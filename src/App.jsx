@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./App.css";
 // JSX: javascript XML => Là 1 định dạng cho viết HTML trong react, sẽ convert sang reactElement
 
 // Khi sử dụng JSX trong react giúp ta viết code dễ dàng hơn
@@ -68,7 +68,7 @@ function App() {
 
   // Trong component return về JSX
   return (
-    <div>
+    <div className="youtube-list">
       {/* <Feature></Feature>
       <Feature></Feature>
       <Feature></Feature> */}
@@ -80,6 +80,24 @@ function App() {
       ></YoutubeItem>
 
       {/* Nếu không truyền vào props thì nó sẽ không hiển thị */}
+      <YoutubeItem
+        image="https://plus.unsplash.com/premium_photo-1714675739730-65a1203d6bda?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        title="Hello Wolrd JS"
+        author="lvlinh"
+        avatar="https://images.unsplash.com/photo-1714995348556-c5a6bb6e7102?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ></YoutubeItem>
+      <YoutubeItem
+        image="https://plus.unsplash.com/premium_photo-1714675739730-65a1203d6bda?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        title="Hello Wolrd JS"
+        author="lvlinh"
+        avatar="https://images.unsplash.com/photo-1714995348556-c5a6bb6e7102?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ></YoutubeItem>
+      <YoutubeItem
+        image="https://plus.unsplash.com/premium_photo-1714675739730-65a1203d6bda?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        title="Hello Wolrd JS"
+        author="lvlinh"
+        avatar="https://images.unsplash.com/photo-1714995348556-c5a6bb6e7102?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ></YoutubeItem>
       <YoutubeItem
         image="https://plus.unsplash.com/premium_photo-1714675739730-65a1203d6bda?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         title="Hello Wolrd JS"
@@ -102,8 +120,24 @@ function YoutubeItem(props) {
   console.log(props);
   return (
     <div className="youtube-item">
-      <div className="youtube-image">
-        <img src={props.image} alt="" />
+      {/* STYLE INLINE: 2 dấu ngoặc nhọn, dấu đầu tiên yêu cầu trong JSX, dấu thứ 2 là object để sử dụng style inline */}
+      <div
+        className="youtube-image"
+        // style={{
+        //   height: "250px",
+        // }}
+      >
+        <img
+          src={props.image}
+          // style={{
+          //   display: "block",
+          //   maxWidth: "100%",
+          //   width: "100%",
+          //   height: "100%",
+          //   objectFit: "cover",
+          // }}
+          alt=""
+        />
       </div>
       <div className="youtube-footer">
         <img src={props.avatar} alt="" className="youtube-avatar" />
