@@ -59,6 +59,7 @@ function Feature() {
 }
 
 //  function App() => là functional components, components chữ cái đầu lúc nào cũng in hoa
+// App là parent componet, Feature là children component
 function App() {
   const name = "Lương Văn Linh";
   function fullName(firstName, lastName) {
@@ -68,9 +69,23 @@ function App() {
   // Trong component return về JSX
   return (
     <div>
+      {/* <Feature></Feature>
       <Feature></Feature>
-      <Feature></Feature>
-      <Feature></Feature>
+      <Feature></Feature> */}
+      <YoutubeItem
+        image="https://images.unsplash.com/photo-1714891203404-b25f32706e0a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        title="Hello Wolrd C#"
+        author="Lương Văn Linh"
+        avatar="https://images.unsplash.com/photo-1714997219940-6d9cd56c3609?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ></YoutubeItem>
+
+      {/* Nếu không truyền vào props thì nó sẽ không hiển thị */}
+      <YoutubeItem
+        image="https://plus.unsplash.com/premium_photo-1714675739730-65a1203d6bda?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        title="Hello Wolrd JS"
+        author="lvlinh"
+        avatar="https://images.unsplash.com/photo-1714995348556-c5a6bb6e7102?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ></YoutubeItem>
     </div>
   );
   // return (
@@ -79,6 +94,30 @@ function App() {
   //     <h2>{fullName("Lương Văn", "Linh")}</h2>
   //   </div>
   // );
+}
+
+// props -> là viết tắt của property, là những thuộc tính bên trong components đó
+
+function YoutubeItem(props) {
+  console.log(props);
+  return (
+    <div className="youtube-item">
+      <div className="youtube-image">
+        <img src={props.image} alt="" />
+      </div>
+      <div className="youtube-footer">
+        <img src={props.avatar} alt="" className="youtube-avatar" />
+        <div className="youtube-info">
+          <h3 className="youtube-title">
+            {props.title || "This is example of titles"}
+          </h3>
+          <h4 className="youtube-author">
+            {props.author || "This is example of author name"}
+          </h4>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default App;

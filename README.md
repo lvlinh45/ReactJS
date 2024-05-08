@@ -18,3 +18,8 @@
 
 - Components cho phép chia nhỏ UI dưới dạng nhiều Thành phần khác nhau để có thể tái sử dụng
 - function App() => là functional components, components chữ cái đầu lúc nào cũng in hoa
+- Trong component return về JSX
+
+## props
+
+- props -> là viết tắt của property, là những thuộc tính bên trong components đó
