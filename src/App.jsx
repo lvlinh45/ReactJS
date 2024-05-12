@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+import YoutubeList from "./components/youtube/YoutubeList";
+
 // JSX: javascript XML => Là 1 định dạng cho viết HTML trong react, sẽ convert sang reactElement
 
 // Khi sử dụng JSX trong react giúp ta viết code dễ dàng hơn
@@ -62,48 +64,21 @@ function Feature() {
 // App là parent componet, Feature là children component
 function App() {
   const name = "Lương Văn Linh";
+  // const numbers = [1, 2, 3, 4, 5, 6];
+  // const double = numbers.map((item) => item * 2);
+  // console.log(double);
+
   function fullName(firstName, lastName) {
     return `${firstName} ${lastName}`;
   }
 
   // Trong component return về JSX
   return (
-    <div className="youtube-list">
-      {/* <Feature></Feature>
-      <Feature></Feature>
-      <Feature></Feature> */}
-      <YoutubeItem
-        image="https://images.unsplash.com/photo-1714891203404-b25f32706e0a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        title="Hello Wolrd C#"
-        author="Lương Văn Linh"
-        avatar="https://images.unsplash.com/photo-1714997219940-6d9cd56c3609?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      ></YoutubeItem>
-
-      {/* Nếu không truyền vào props thì nó sẽ không hiển thị */}
-      <YoutubeItem
-        image="https://plus.unsplash.com/premium_photo-1714675739730-65a1203d6bda?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        title="Hello Wolrd JS"
-        author="lvlinh"
-        avatar="https://images.unsplash.com/photo-1714995348556-c5a6bb6e7102?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      ></YoutubeItem>
-      <YoutubeItem
-        image="https://plus.unsplash.com/premium_photo-1714675739730-65a1203d6bda?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        title="Hello Wolrd JS"
-        author="lvlinh"
-        avatar="https://images.unsplash.com/photo-1714995348556-c5a6bb6e7102?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      ></YoutubeItem>
-      <YoutubeItem
-        image="https://plus.unsplash.com/premium_photo-1714675739730-65a1203d6bda?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        title="Hello Wolrd JS"
-        author="lvlinh"
-        avatar="https://images.unsplash.com/photo-1714995348556-c5a6bb6e7102?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      ></YoutubeItem>
-      <YoutubeItem
-        image="https://plus.unsplash.com/premium_photo-1714675739730-65a1203d6bda?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        title="Hello Wolrd JS"
-        author="lvlinh"
-        avatar="https://images.unsplash.com/photo-1714995348556-c5a6bb6e7102?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      ></YoutubeItem>
+    <div>
+      <YoutubeList>
+        <h3>{name}</h3>
+        {/* ở đây gọi là children: html, component,text, variable */}
+      </YoutubeList>
     </div>
   );
   // return (
@@ -116,42 +91,6 @@ function App() {
 
 // props -> là viết tắt của property, là những thuộc tính bên trong components đó
 
-function YoutubeItem(props) {
-  console.log(props);
-  return (
-    <div className="youtube-item">
-      {/* STYLE INLINE: 2 dấu ngoặc nhọn, dấu đầu tiên yêu cầu trong JSX, dấu thứ 2 là object để sử dụng style inline */}
-      <div
-        className="youtube-image"
-        // style={{
-        //   height: "250px",
-        // }}
-      >
-        <img
-          src={props.image}
-          // style={{
-          //   display: "block",
-          //   maxWidth: "100%",
-          //   width: "100%",
-          //   height: "100%",
-          //   objectFit: "cover",
-          // }}
-          alt=""
-        />
-      </div>
-      <div className="youtube-footer">
-        <img src={props.avatar} alt="" className="youtube-avatar" />
-        <div className="youtube-info">
-          <h3 className="youtube-title">
-            {props.title || "This is example of titles"}
-          </h3>
-          <h4 className="youtube-author">
-            {props.author || "This is example of author name"}
-          </h4>
-        </div>
-      </div>
-    </div>
-  );
-}
+// rendering list
 
 export default App;
