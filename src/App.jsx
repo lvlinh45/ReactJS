@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 import YoutubeList from "./components/youtube/YoutubeList";
+import Toggle from "./components/toggle/Toggle";
+import Counter from "./components/counter/Counter";
 
 // JSX: javascript XML => Là 1 định dạng cho viết HTML trong react, sẽ convert sang reactElement
 
@@ -44,7 +46,7 @@ import YoutubeList from "./components/youtube/YoutubeList";
 
 // Components cho phép chia nhỏ UI dưới dạng nhiều Thành phần khác nhau để có thể tái sử dụng
 
-function Feature() {
+/* function Feature() {
   return (
     <div>
       <div className="feature">
@@ -58,7 +60,7 @@ function Feature() {
       </div>
     </div>
   );
-}
+} */
 
 //  function App() => là functional components, components chữ cái đầu lúc nào cũng in hoa
 // App là parent componet, Feature là children component
@@ -75,10 +77,13 @@ function App() {
   // Trong component return về JSX
   return (
     <div>
-      <YoutubeList>
-        <h3>{name}</h3>
-        {/* ở đây gọi là children: html, component,text, variable */}
-      </YoutubeList>
+      {/* <YoutubeList> */}
+      {/* <h3>{name}</h3> */}
+      {/* ở đây gọi là children: html, component,text, variable */}
+      {/* </YoutubeList> */}
+
+      <Toggle></Toggle>
+      <Counter></Counter>
     </div>
   );
   // return (

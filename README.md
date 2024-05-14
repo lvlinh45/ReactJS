@@ -1,5 +1,7 @@
 # Note các kiến thức liên quan
 
+## CHƯƠNG 2
+
 ## JSX
 
 - JSX: javascript XML => Là 1 định dạng cho viết HTML trong react, sẽ convert sang reactElement
@@ -30,3 +32,37 @@
 - Cách 1: Inline style: Dùng attribute style ={{ width: 100px }}
   Lưu ý: Theo cú pháp camel case, dấu ngoặc nhọn thứ nhất là JSX, thứ 2 là object
 - Cách 2: Dùng class, viết ra file riêng. Nhớ import file CSS vào file cần dùng
+
+## children: là props đặc biệt
+
+### Chương 2 chúng ta đã học được những gì ?
+
+1. Cài đặt được create-react-app(CRA)
+2. Biết được JSX là gì và sử dụng nó trong React
+3. Biết được thế nào là components và thay đổi các giá trị cho từng components khác nhau với props
+4. Biết cách styling cơ bản trong React
+5. Biết cách sử dụng kỹ thuật rendering list cơ bản
+6. Hiểu được về props đặc biệt là children
+
+## CHƯƠNG 3
+
+1. State là gì? => Là thông tin được lưu bên trong component đó, tức là component có thể tùy chỉnh thông tin đó. Dùng state bên trong functional Component, để sử dụng state dùng 1 hook tên là useState
+
+- React hook là 1 tính năng trong React cho phép sử dụng state và các tính năng khác của React mà không sử dụng class
+- Dùng hook thì phải dùng trong Function Componet
+
+- Stateless fuctional Component: Là function component nhưng không sử dụng state
+- Statefull fuctional Component:Là function component co sử dụng state
+
+- Khi state change(thay đổi) thì component sẽ re-render lại => Để cập nhật lại DOM ra bên ngoài
+
+* Các bước dùng state
+
+a. Enabling state: useState(initialize value) => initialize value có thể truyền boolean, number, string, undefined, null, {title: "FE DEv"}
+b. initialize state: Giá trị khởi tạo => useState (false)
+c. reading state
+d. updating state
+
+2. Những nguyên tắc khi sử dụng hook cần nắm
+
+- Dùng hook ở trên cùng của component, không dùng trong vòng lặp, function
