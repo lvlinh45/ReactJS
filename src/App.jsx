@@ -3,6 +3,7 @@ import "./App.css";
 import YoutubeList from "./components/youtube/YoutubeList";
 import Toggle from "./components/toggle/Toggle";
 import Counter from "./components/counter/Counter";
+import Game from "./components/tictactoe/Game";
 
 // JSX: javascript XML => Là 1 định dạng cho viết HTML trong react, sẽ convert sang reactElement
 
@@ -82,8 +83,9 @@ function App() {
       {/* ở đây gọi là children: html, component,text, variable */}
       {/* </YoutubeList> */}
 
-      <Toggle></Toggle>
-      <Counter></Counter>
+      {/*   <Toggle></Toggle>
+      <Counter></Counter> */}
+      <Game></Game>
     </div>
   );
   // return (

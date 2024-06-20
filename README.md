@@ -66,3 +66,13 @@ d. updating state
 2. Những nguyên tắc khi sử dụng hook cần nắm
 
 - Dùng hook ở trên cùng của component, không dùng trong vòng lặp, function
+- Array(9).fill() => Tạo ra các mảng giống nhau 1 cách nhanh nhất
+
+- Object Destructuring
+
+  const student = {
+  name: 'evondev',
+  age: 28
+  }
+
+=> const {name,age} = student;
