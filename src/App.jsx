@@ -3,7 +3,17 @@ import "./App.css";
 import YoutubeList from "./components/youtube/YoutubeList";
 import Toggle from "./components/toggle/Toggle";
 import Counter from "./components/counter/Counter";
-import Game from "./components/tictactoe/Game";
+import Button from "./components/button/Button";
+import Card from "./components/Card/Card";
+import CardList from "./components/Card/CardList";
+import { GlobalStyle } from "./GlobalStyle";
+import Card2 from "./components/Card/Card2.jsx";
+import Portfolio from "./components/Portfolio/Portfolio.jsx";
+import PortfolioList from "./components/Portfolio/PortfolioList.jsx";
+
+import { ThemeProvider } from "styled-components";
+import CardTailwind from "./components/Card/CardTailwind.jsx";
+// import Game from "./components/tictactoe/Game";
 
 // JSX: javascript XML => Là 1 định dạng cho viết HTML trong react, sẽ convert sang reactElement
 
@@ -65,6 +75,13 @@ import Game from "./components/tictactoe/Game";
 
 //  function App() => là functional components, components chữ cái đầu lúc nào cũng in hoa
 // App là parent componet, Feature là children component
+
+const theme = {
+  colors: {
+    blue: "#ff6bcb",
+  },
+  orange: "#ffa400",
+};
 function App() {
   const name = "Lương Văn Linh";
   // const numbers = [1, 2, 3, 4, 5, 6];
@@ -78,14 +95,26 @@ function App() {
   // Trong component return về JSX
   return (
     <div>
+      {/* <ThemeProvider theme={theme}> */}
+      {/* <GlobalStyle></GlobalStyle> */}
       {/* <YoutubeList> */}
       {/* <h3>{name}</h3> */}
       {/* ở đây gọi là children: html, component,text, variable */}
       {/* </YoutubeList> */}
-
       {/*   <Toggle></Toggle>
       <Counter></Counter> */}
-      <Game></Game>
+      {/* <Button>Primary</Button>
+      <Button secondary>Secondary</Button> */}
+      <CardList>
+        {/* <Card2 secondary={true}></Card2> */}
+        <CardTailwind primary></CardTailwind>
+      </CardList>
+      {/* <PortfolioList>
+        <Portfolio></Portfolio>
+        <Portfolio></Portfolio>
+        <Portfolio></Portfolio>
+      </PortfolioList> */}
+      {/* </ThemeProvider> */}
     </div>
   );
   // return (

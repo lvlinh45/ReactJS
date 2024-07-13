@@ -76,3 +76,7 @@ d. updating state
   }
 
 => const {name,age} = student;
+
+Note: 
+- prop không thay đổi, nhận từ component cha truyền xuống, có gì render cái đấy => hết
+- Thay đổi theo thời gian => Dùng state có thể thay đổi được.
