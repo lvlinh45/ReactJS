@@ -13,6 +13,10 @@ import PortfolioList from "./components/Portfolio/PortfolioList.jsx";
 
 import { ThemeProvider } from "styled-components";
 import CardTailwind from "./components/Card/CardTailwind.jsx";
+import Photos from "./components/photo/Photos.jsx";
+import Timer from "./components/Timer.jsx";
+import Header from "./components/Header.jsx";
+import HackerNews from "./components/news/HackerNews.jsx";
 // import Game from "./components/tictactoe/Game";
 
 // JSX: javascript XML => Là 1 định dạng cho viết HTML trong react, sẽ convert sang reactElement
@@ -105,16 +109,21 @@ function App() {
       <Counter></Counter> */}
       {/* <Button>Primary</Button>
       <Button secondary>Secondary</Button> */}
-      <CardList>
-        {/* <Card2 secondary={true}></Card2> */}
-        <CardTailwind primary></CardTailwind>
-      </CardList>
+      {/*    <CardList>
+          <Card2 secondary={true}></Card2>
+          <CardTailwind primary></CardTailwind>
+        </CardList> */}
       {/* <PortfolioList>
         <Portfolio></Portfolio>
         <Portfolio></Portfolio>
         <Portfolio></Portfolio>
       </PortfolioList> */}
       {/* </ThemeProvider> */}
+      {/* <Photos></Photos> */}
+      {/* <Counter></Counter>
+       */}
+      {/* <Header></Header> */}
+      <HackerNews></HackerNews>
     </div>
   );
   // return (

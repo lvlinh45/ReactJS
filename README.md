@@ -77,6 +77,11 @@ d. updating state
 
 => const {name,age} = student;
 
-Note: 
+Note:
+
 - prop không thay đổi, nhận từ component cha truyền xuống, có gì render cái đấy => hết
 - Thay đổi theo thời gian => Dùng state có thể thay đổi được.
+
+# useEffect
+
+- Xử lý các vấn đề liên quan đến side-effect: tức là bên trong function nhưng tác động ra bên ngoài
