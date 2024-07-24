@@ -85,3 +85,8 @@ Note:
 # useEffect
 
 - Xử lý các vấn đề liên quan đến side-effect: tức là bên trong function nhưng tác động ra bên ngoài
+
+# useRef
+
+- Khi useState thay đổi => Component rerender
+- Ref thay đổi => không rerender

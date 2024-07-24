@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./App.css";
 import YoutubeList from "./components/youtube/YoutubeList";
 import Toggle from "./components/toggle/Toggle";
@@ -17,6 +17,8 @@ import Photos from "./components/photo/Photos.jsx";
 import Timer from "./components/Timer.jsx";
 import Header from "./components/Header.jsx";
 import HackerNews from "./components/news/HackerNews.jsx";
+import HackerNewsWithReducer from "./components/news/HackerNewsWithReducer.jsx";
+
 // import Game from "./components/tictactoe/Game";
 
 // JSX: javascript XML => Là 1 định dạng cho viết HTML trong react, sẽ convert sang reactElement
@@ -80,25 +82,37 @@ import HackerNews from "./components/news/HackerNews.jsx";
 //  function App() => là functional components, components chữ cái đầu lúc nào cũng in hoa
 // App là parent componet, Feature là children component
 
-const theme = {
-  colors: {
-    blue: "#ff6bcb",
-  },
-  orange: "#ffa400",
-};
-function App() {
-  const name = "Lương Văn Linh";
-  // const numbers = [1, 2, 3, 4, 5, 6];
-  // const double = numbers.map((item) => item * 2);
-  // console.log(double);
+// useReducer
+// 1. Init state
+// 2. Actions
+// 3. Reducer
+// 4. Dispatch
 
-  function fullName(firstName, lastName) {
-    return `${firstName} ${lastName}`;
-  }
+// Ref
+// const inputRef, abcRef = useRef = React,useRef(initialValue);
+
+function App() {
+  const countRef1 = useRef(0);
+  const handler1 = () => {
+    // truy xuất giá trị ref: current
+    console.log(countRef.current);
+    // update giá trị ref
+    countRef.current = 10;
+  };
+
+  // const [count, setCount] = useState(0);
+  const countRef = useRef(0);
+  const handle = () => {
+    const updateCount = countRef.current + 1;
+    console.log(`Clicked ${updateCount} times`);
+    countRef.current++;
+  };
+  console.log("Render");
 
   // Trong component return về JSX
   return (
     <div>
+      <button onClick={handle}>Click me</button>
       {/* <ThemeProvider theme={theme}> */}
       {/* <GlobalStyle></GlobalStyle> */}
       {/* <YoutubeList> */}
@@ -123,7 +137,7 @@ function App() {
       {/* <Counter></Counter>
        */}
       {/* <Header></Header> */}
-      <HackerNews></HackerNews>
+      {/* <HackerNewsWithReducer></HackerNewsWithReducer> */}
     </div>
   );
   // return (
