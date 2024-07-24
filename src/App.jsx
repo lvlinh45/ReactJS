@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./App.css";
 import YoutubeList from "./components/youtube/YoutubeList";
 import Toggle from "./components/toggle/Toggle";
@@ -18,6 +18,8 @@ import Timer from "./components/Timer.jsx";
 import Header from "./components/Header.jsx";
 import HackerNews from "./components/news/HackerNews.jsx";
 import HackerNewsWithReducer from "./components/news/HackerNewsWithReducer.jsx";
+import StopWatch from "../StopWatch.jsx";
+import Input from "./components/Input.jsx";
 
 // import Game from "./components/tictactoe/Game";
 
@@ -92,7 +94,7 @@ import HackerNewsWithReducer from "./components/news/HackerNewsWithReducer.jsx";
 // const inputRef, abcRef = useRef = React,useRef(initialValue);
 
 function App() {
-  const countRef1 = useRef(0);
+  /*   const countRef1 = useRef(0);
   const handler1 = () => {
     // truy xuất giá trị ref: current
     console.log(countRef.current);
@@ -107,12 +109,13 @@ function App() {
     console.log(`Clicked ${updateCount} times`);
     countRef.current++;
   };
-  console.log("Render");
+  console.log("Render"); */
 
   // Trong component return về JSX
   return (
     <div>
-      <button onClick={handle}>Click me</button>
+      {/* <StopWatch></StopWatch> */}
+      <Input></Input>
       {/* <ThemeProvider theme={theme}> */}
       {/* <GlobalStyle></GlobalStyle> */}
       {/* <YoutubeList> */}
