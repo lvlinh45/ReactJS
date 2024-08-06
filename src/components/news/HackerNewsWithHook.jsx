@@ -1,55 +1,19 @@
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
+import useHackerNewsAPI from "../../hooks/useHackerNewsAPI";
 // thư viện để debounce
 // import lodash, { values } from "lodash";
 // https://hn.algolia.com/api/v1/search?query=react
-const HackerNews = () => {
-  const [hits, setHits] = useState([]);
+
+const HackerNewsWithHook = () => {
   const [query, setQuery] = useState("");
-  const [loading, setLoading] = useState(true);
-  const [errorMessage, setErrorMessage] = useState("");
-  const handleFetchData = useRef({});
-  const [url, setUrl] = useState(
-    `https://hn.algolia.com/api/v1/search?query=${query}`
+
+  const { loading, errorMessage, setUrl, data } = useHackerNewsAPI(
+    `https://hn.algolia.com/api/v1/search?query=''`,
+    { hits: [] }
   );
 
-  const isMounted = useRef(true);
-
-  useEffect(() => {
-    return () => {
-      // unmounted component
-      isMounted.current = false;
-    };
-  });
-
-  handleFetchData.current = async () => {
-    setLoading(true);
-
-    try {
-      const response = await axios.get(url);
-      setTimeout(() => {
-        if (isMounted.current) {
-          setHits(response.data?.hits);
-          setLoading(false);
-        }
-      }, 3000);
-    } catch (error) {
-      setLoading(false);
-      setErrorMessage(`The error happend ${error}`);
-    }
-
-    // Nếu response.data có thì lấy response.data.hits
-
-    // console.log(response.data?.hits);
-  };
-
-  /*   const handleUpdateQuery = lodash.debounce((e) => {
-    setQuery(e.target.value);
-  }, 500); */
-  React.useEffect(() => {
-    handleFetchData.current();
-  }, [url]);
-
+  console.log(data);
   return (
     <div className="bg-white mx-auto my-5 p-5 rounded-lg shadow-md w-2/4">
       <div className="flex mb-5 gap-x-5">
@@ -77,8 +41,8 @@ const HackerNews = () => {
       )}
       <div className="flex flex-wrap gap-5">
         {!loading &&
-          hits.length > 0 &&
-          hits.map((item, index) => {
+          data.hits.length > 0 &&
+          data.hits.map((item, index) => {
             if (!item.title || item.title.length <= 0) return null;
             return (
               <h3
@@ -94,4 +58,4 @@ const HackerNews = () => {
   );
 };
 
-export default HackerNews;
+export default HackerNewsWithHook;
