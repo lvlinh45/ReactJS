@@ -7,6 +7,7 @@ import HackerNews from "./components/news/HackerNews.jsx";
 import HackerNewsWithHook from "./components/news/HackerNewsWithHook.jsx";
 import Dropdown from "../Dropdown .jsx";
 import Form from "./components/form/Form.jsx";
+import MovieSearchApp from "./components/MovieSearchApp.jsx";
 
 //  function App() => là functional components, components chữ cái đầu lúc nào cũng in hoa
 // App là parent componet, Feature là children component
@@ -24,7 +25,7 @@ function App() {
   const [show, setShow] = useState(false);
   return (
     <div>
-      <Form></Form>
+      <MovieSearchApp></MovieSearchApp>
     </div>
   );
 }
