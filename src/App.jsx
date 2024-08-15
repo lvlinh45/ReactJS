@@ -9,6 +9,8 @@ import Dropdown from "../Dropdown .jsx";
 import Form from "./components/form/Form.jsx";
 import MovieSearchApp from "./components/MovieSearchApp.jsx";
 import SignUpForm from "./components/form/SignUpForm.jsx";
+import SignUpFormV2 from "./components/form/SignUpFormV2.jsx";
+import SignUpFormFinal from "./components/form/SignUpFormFinal.jsx";
 
 //  function App() => là functional components, components chữ cái đầu lúc nào cũng in hoa
 // App là parent componet, Feature là children component
@@ -26,7 +28,7 @@ function App() {
   const [show, setShow] = useState(false);
   return (
     <div>
-      <SignUpForm></SignUpForm>
+      <SignUpFormFinal></SignUpFormFinal>
     </div>
   );
 }
