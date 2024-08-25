@@ -1,16 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 
 // import Input from "./components/Input.jsx";
-import Blog from "../Blog.jsx";
-import HackerNews from "./components/news/HackerNews.jsx";
-import HackerNewsWithHook from "./components/news/HackerNewsWithHook.jsx";
-import Dropdown from "../Dropdown .jsx";
-import Form from "./components/form/Form.jsx";
-import MovieSearchApp from "./components/MovieSearchApp.jsx";
-import SignUpForm from "./components/form/SignUpForm.jsx";
-import SignUpFormV2 from "./components/form/SignUpFormV2.jsx";
-import SignUpFormFinal from "./components/form/SignUpFormFinal.jsx";
+import SignUpFormHook from "./components/form/SignUpFormHook.jsx";
 
 //  function App() => là functional components, components chữ cái đầu lúc nào cũng in hoa
 // App là parent componet, Feature là children component
@@ -25,10 +17,9 @@ import SignUpFormFinal from "./components/form/SignUpFormFinal.jsx";
 // const inputRef, abcRef = useRef = React,useRef(initialValue);
 
 function App() {
-  const [show, setShow] = useState(false);
   return (
     <div>
-      <SignUpFormFinal></SignUpFormFinal>
+      <SignUpFormHook></SignUpFormHook>
     </div>
   );
 }
