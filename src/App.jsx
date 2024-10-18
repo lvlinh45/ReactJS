@@ -1,44 +1,35 @@
-import { Routes, Route } from "react-router-dom";
-import Nav from "./components/Nav";
-import BlogPage from "./components/BlogPage";
-import ProfilePage from "./components/ProfilePage";
-import BlogPageDetail from "./components/BlogPageDetail";
+import FetchingData from "./components/advaced-react/hoc/FetchingData";
+import Accordion from "./components/advaced-react/react-composition/Accordion";
+import Editable from "./components/advaced-react/react-composition/Editable";
+import Input from "./components/advaced-react/render-props/HandleValue";
+import HandleValue from "./components/advaced-react/render-props/HandleValue";
+import Title from "./components/advaced-react/render-props/Title";
 
+// HOC = High order component pattern: chia sẻ logic từ 1 component mà không cần phải viết lại
+// render props: gioongs formik
 const App = () => {
   return (
-    <div>
-      {/*  <Routes>
-        <Route
-          path="/"
-          element={
-            <div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-              recusandae magnam rerum? Aperiam a sunt impedit harum dolores
-              libero, perspiciatis cupiditate, nemo eligendi ipsam ea beatae
-              adipisci architecto excepturi sapiente!
-            </div>
-          }
-        ></Route>
-        <Route path="/about" element={<div>This is about page</div>}></Route>
-        <Route
-          path="/movie/:movieId"
-          element={<div>This is detail of movied id</div>}
-        ></Route>
-        <Route path="/movie" element={<div>this is a movie</div>}></Route>
-      </Routes> */}
-      <Routes>
-        <Route path="/" element={<Nav></Nav>}>
-          <Route path="/" element={<>Home Page</>}></Route>
-          <Route path="/blog" element={<BlogPage></BlogPage>}></Route>
-          <Route
-            path="/blog/:slug"
-            element={<BlogPageDetail></BlogPageDetail>}
-          ></Route>
-          <Route path="/profile" element={<ProfilePage></ProfilePage>}></Route>
-          {/* Muuốn 404 không có nav thì đưa ra ngoài route */}
-          <Route path="*" element={<>This is 404 page</>}></Route>
-        </Route>
-      </Routes>
+    <div className="w-full p-10 max-w-[600px] mx-auto">
+      {/* <FetchingData></FetchingData> */}
+      {/*  <Title>{() => <h1>Hello from render props</h1>}</Title> */}
+      {/* <HandleValue></HandleValue> */}
+      <Accordion header="Can I change my plan later">
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab obcaecati
+          autem inventore, perferendis perspiciatis ipsam beatae natus sapiente
+          assumenda quo molestias maxime impedit ipsa libero rerum fuga quas,
+          voluptatem in.
+        </div>
+      </Accordion>
+      <Accordion header="Can I become a front-end developer">
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab obcaecati
+          autem inventore, perferendis perspiciatis ipsam beatae natus sapiente
+          assumenda quo molestias maxime impedit ipsa libero rerum fuga quas,
+          voluptatem in.
+        </div>
+      </Accordion>
+      {/* <Editable></Editable> */}
     </div>
   );
 };
