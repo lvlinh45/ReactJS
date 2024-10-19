@@ -7,6 +7,7 @@ import { AccordionProvider } from "./accordion-context";
 
 // specialized component
 // container component
+// compound component
 
 const Accordion = ({ header, children }) => {
   return (
