@@ -1,15 +1,20 @@
-import { useState } from "react";
-import Counter from "./components/advaced-react/control-props/Counter";
+import Counter from "./components/advaced-react/state-reducer/Counter";
+import useCounter from "./components/advaced-react/state-reducer/useCounter";
+import FirebaseApp from "./firebase/FirebaseApp";
 
 const App = () => {
-  const [count, setCount] = useState(5);
-  const handleCountChange = (newCount) => {
-    if (newCount > 10) setCount(0);
-    else setCount(newCount);
-  };
+  // const { count, handleIncrement, handleDecrement } = useCounter();
+  /* <div>
+      <Counter
+        count={count}
+        handleIncrement={handleIncrement}
+        handleDecrement={handleDecrement}
+      ></Counter>
+      ;
+    </div> */
   return (
     <div>
-      <Counter value={count} onChange={handleCountChange}></Counter>
+      <FirebaseApp></FirebaseApp>
     </div>
   );
 };

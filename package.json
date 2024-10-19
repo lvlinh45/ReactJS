@@ -13,6 +13,7 @@
     "@hookform/resolvers": "^3.9.0",
     "@uidotdev/usehooks": "^2.4.1",
     "axios": "^1.7.2",
+    "firebase": "^10.14.1",
     "formik": "^2.4.6",
     "lodash": "^4.17.21",
     "prop-types": "^15.8.1",
